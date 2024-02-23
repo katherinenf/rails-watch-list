@@ -7,7 +7,7 @@
 
 <div class="cards">
   <% @lists.each do |list| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://media.istockphoto.com/id/1447134066/photo/contemporary-art-collage-creative-design-in-retro-style-beautiful-young-couple-man-and-woman.webp?b=1&s=170667a&w=0&k=20&c=5gF8Mofwe0R-CyoillKyuGlLBOA4VqEIPlqileudidw=')">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path list.photo.key, height: 400, crop: :fill %>)">
       <%=link_to list.name, list_path(list), class: "btn btn-ghost" %>
     </div>
   <% end %>

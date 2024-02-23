@@ -8,6 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+Bookmark.delete_all
 Movie.delete_all
 List.delete_all
 
@@ -20,8 +21,5 @@ Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal masterm
 
 puts Movie.count
 
-List.create(name: "Good stuff")
-List.create(name: "Great stuff")
-List.create(name: "Terrible stuff")
 
 puts List.count
